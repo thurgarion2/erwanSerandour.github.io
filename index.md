@@ -1,15 +1,15 @@
 ---
-name: Erwan
+givenName: Erwan
 familyName: Serandour
 layout: default
 ---
 
+Hi! I'am **Erwan Serandour**.
 
-Content is written in [Markdown](https://learnxinyminutes.com/docs/markdown/).
-Plain text format allows you to focus on your **content**.
+I recently graduated from [EPFL](https://www.epfl.ch) with a Master's in Communication Systems. I'm currently looking for a job after completing my master's thesis on [Immediate tracing for smoother debugging and code exploration](https://github.com/thurgarion2/PrintWizard).
 
-<!--
-You can use HTML elements in Markdown, such as the comment element, and they won't
-be affected by a markdown parser. However, if you create an HTML element in your
-markdown file, you cannot use markdown syntax within that element's contents.
--->
+I'm interested in application development and programming languages, especially development practices; here are some examples:
+* Categories of programming languages;
+* Web development;
+
+The best book📕 on programming I've read recently is [*The Art of Unix Programming*](https://www.amazon.com/UNIX-Programming-Addison-Wesley-Professional-Computng/dp/0131429019).
