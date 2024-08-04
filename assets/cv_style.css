@@ -1,0 +1,231 @@
+/*******************************************************
+**************** General ******************
+*******************************************************/
+:root {
+    --measure: 60ch;
+    --ratio: 1.25;
+    --s-1: calc(var(--s0) / var(--ratio));
+    --s0: 1rem;
+    --s1: calc(var(--s0) * var(--ratio));
+    --s2: calc(var(--s1) * var(--ratio));
+    --s3: calc(var(--s2) * var(--ratio));
+
+    --line-height: 1.5ch;
+    line-height: var(--line-height);
+
+    box-sizing: border-box;
+    font-family: "Overpass", "IBM Plex Sans", Arial, sans-serif;
+    font-variant-numeric: proportional-nums oldstyle-nums;
+    font-weight: 300;
+    font-size: var(--s0);
+}
+
+a[itemprop="email"] {
+    color: black;
+    text-decoration: none;
+}
+
+/**************
+********* measure
+**************/
+
+
+* {
+    max-inline-size: var(--measure);
+}
+
+html,
+div,
+header,
+nav,
+main,
+body,
+footer {
+    max-inline-size: none;
+}
+
+/**************
+********* layout
+**************/
+
+/********
+**** default stack
+********/
+
+
+.stack\:default {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stack\:default>* {
+    margin-block: 0;
+}
+
+.stack\:default>*+* {
+    margin-block-start: calc(var(--line-height) / 2);
+}
+
+/********
+**** medium small stack
+********/
+
+.stack\:medium-small {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stack\:medium-small>* {
+    margin-block: 0;
+}
+
+.stack\:medium-small>*+* {
+    margin-block-start: calc(var(--line-height) / 3);
+}
+
+/********
+**** small stack
+********/
+
+.stack\:small {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.stack\:small>* {
+    margin-block: 0;
+}
+
+.stack\:small>*+* {
+    margin-block-start: calc(var(--line-height) / 4);
+}
+
+/********
+**** cluster
+********/
+.cluster\:space-between {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--line-height);
+}
+
+/********
+**** cluster
+********/
+.cluster {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    gap: var(--line-height);
+}
+
+/********
+**** sidebar
+********/
+
+.with-sidebar\:photo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--line-height);
+}
+
+.with-sidebar\:photo > :first-child {
+    flex-basis: var(--image-size);
+    flex-grow: 1;
+}
+
+.with-sidebar\:photo > :last-child {
+    flex-basis: 0;
+    flex-grow: 999;
+    min-inline-size: 50%;
+}
+
+
+
+
+/*******************************************************
+**************** header ******************
+*******************************************************/
+
+/**************
+********* utility
+**************/
+
+.portrait {
+    --image-size: 6rem;
+    clip-path: circle(2.5rem at calc(var(--image-size) / 2 - 0.18rem) center);
+    width: var(--image-size);
+}
+
+.title {
+    margin: 0;
+}
+
+.info {
+    align-items: end;
+}
+
+.header {
+    margin-block-end:  calc(var(--line-height) / 2);
+}
+
+
+/*******************************************************
+**************** section ******************
+*******************************************************/
+
+/**************
+********* layout
+**************/
+
+/********
+**** box
+********/
+
+.box\:section\:content {
+    padding-inline-start: var(--s0);
+}
+
+/**************
+********* utility
+**************/
+
+/********
+**** title
+********/
+
+.section\:title {
+    padding-block-end: calc(var(--line-height) / 4);
+    margin-block-end: calc(var(--line-height) / 4);
+    border-block-end: 1px solid;
+    font-size: var(--s1);
+}
+
+.section\:title+* {
+    margin-block-start: 0;
+}
+
+/*******************************************************
+**************** subsection ******************
+*******************************************************/
+
+
+/**************
+********* utility
+**************/
+
+/********
+**** subtitle
+********/
+
+.section\:subtitle {
+    font-weight: 600;
+
+}
